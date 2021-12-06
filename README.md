@@ -62,8 +62,8 @@ print1	MOVE $E3,B
 	CMP #$0,B	*check if screen ready
 	BEQ print1	*if not ready loop
 	MOVE A,$E2	*print letter to screen
-
 	MOVE #$0,B
+	
 write2	MOVE $E3,A	   *say “ and “ 
 	CMP #$0,A	    *check if screen ready
 	BEQ write2	    *if not ready loop
@@ -83,8 +83,8 @@ print2	MOVE $E3,A
 	CMP #$0,A	*check if screen ready
 	BEQ print2	*if not ready loop
 	MOVE B,$E2	*if ready print letter to screen
-
 	MOVE #$0,B
+	
 write3	MOVE $E3,A	    *say “ is “
 	CMP #$0,A	    *check if screen ready
 	BEQ write3	    *if not ready loop
@@ -120,6 +120,7 @@ check1	MOVE #^20,A      *if 10-19
 	BMI lessmax
 
 lessten	ADD #^48,B	*convert to ASCII
+
 print5	MOVE $E3,A	
 	CMP #$0,A	*check if screen ready
 	BEQ print5	*if not loop
@@ -127,6 +128,7 @@ print5	MOVE $E3,A
 	JMP end
 
 lesstwe	MOVE #^49,A 	*1 in ASCII
+
 print3	MOVE $E3,B	
 	CMP #$0,B	*check if screen ready
 	BEQ print3	*if not loop
@@ -137,6 +139,7 @@ print3	MOVE $E3,B
 
 lessmax	MOVE #^50,A	*2 in ASCII
 	MOVE A,$E2	 *print 2
+	
 print4	MOVE $E3,B	
 	CMP #$0,B	 *check if screen ready
 	BEQ print4          *if not loop	
