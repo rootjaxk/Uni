@@ -156,8 +156,4 @@ screen	MOVE $E3,A
 	JMP end
 
 end	HALT
-
-
-
-
 ```
