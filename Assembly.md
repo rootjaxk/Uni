@@ -1,6 +1,6 @@
 # Assembly
 
-A program handwritten in assembly for the JASPER processor which took two characters as inputs and calculated the differences between them. I achieved 20/20 for this assignment. 
+A program handwritten in assembly for the JASPER processor which took two characters as inputs and calculated the differences between them.
 
 ![image](https://user-images.githubusercontent.com/87831546/144907004-247441c9-3982-4bc8-a8cf-762b8ca7f04d.png)
 
