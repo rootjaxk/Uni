@@ -1,4 +1,4 @@
-A holiday website handwritten with PHP,HTML,CSS and a tiny bit of JavaScript. 
+A holiday website handwritten with PHP,SQL,HTML,CSS and a tiny bit of JavaScript. It has a fluid, responsive design that is compatible with all screen sizes and connects to a MySQL database for ease of updating holidays.
 
 It can be found here: http://unn-w20007431.newnumyspace.co.uk/LeadingChoiceGetaways/index.html 
 
