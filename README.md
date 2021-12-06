@@ -5,7 +5,7 @@ This was a simple project in my first year where I hand wrote a program in assem
 ![image](https://user-images.githubusercontent.com/87831546/144907004-247441c9-3982-4bc8-a8cf-762b8ca7f04d.png)
 
 ```
-ORG 0
+	ORG 0
 	MOVE #$0,B
 write	MOVE $E3,A	    *say ‘”The difference between”
 	CMP #$0,A	   *check if screen ready
