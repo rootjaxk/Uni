@@ -1,1 +1,3 @@
-# A collection of stuff i've made at uni
+# Uni
+
+A collection of stuff I've made at uni
