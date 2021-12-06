@@ -7,7 +7,8 @@ This was a simple project in my first year where I hand wrote a program in assem
 ```
 	ORG 0
 	MOVE #$0,B
-write	MOVE $E3,A	    *say ‘”The difference between”
+	
+write	MOVE $E3,A	   *say ‘”The difference between”
 	CMP #$0,A	   *check if screen ready
 	BEQ write	   *if LSb is 0 loop
 	MOVE B+data,A	   *move data to A
@@ -64,13 +65,13 @@ print1	MOVE $E3,B
 	MOVE A,$E2	*print letter to screen
 	MOVE #$0,B
 	
-write2	MOVE $E3,A	   *say “ and “ 
-	CMP #$0,A	    *check if screen ready
-	BEQ write2	    *if not ready loop
+write2	MOVE $E3,A	*say “ and “ 
+	CMP #$0,A	*check if screen ready
+	BEQ write2	*if not ready loop
 	MOVE B+data2,A  *move data2 to A
-	MOVE A,$E2	    *write letter to screen
-	ADD #$1,B	    *iterate over data2
-	CMP #^5,B	    *if reach end go to loop2
+	MOVE A,$E2	*write letter to screen
+	ADD #$1,B	*iterate over data2
+	CMP #^5,B	*if reach end go to loop2
 	BNE write2
 
 loop2	MOVE $E1,B	
@@ -85,20 +86,20 @@ print2	MOVE $E3,A
 	MOVE B,$E2	*if ready print letter to screen
 	MOVE #$0,B
 	
-write3	MOVE $E3,A	    *say “ is “
-	CMP #$0,A	    *check if screen ready
-	BEQ write3	    *if not ready loop
+write3	MOVE $E3,A	*say “ is “
+	CMP #$0,A	*check if screen ready
+	BEQ write3	*if not ready loop
 	MOVE B+data3,A  *move data3 to A
-	MOVE A,$E2	    *write letter to screen
-	ADD #$1,B	    *iterate over data
-	CMP #^4,B	    *if reach end go to loop
+	MOVE A,$E2	*write letter to screen
+	ADD #$1,B	*iterate over data
+	CMP #^4,B	*if reach end go to loop
 	BNE write3
 
 	MOVE $FB,A	*fetch letter 1 from memory
 	MOVE $FC,B	*fetch letter 2 from memory
 	CMP A,B
 	BPL normal	*if difference is positive jump to normal
-	JMP neg	*if difference is negative then sub B,A to make positive
+	JMP neg		*if difference is negative then sub B,A to make positive
 
 neg	SUB B,A		*find difference between negative letters
 	MOVE A,B
@@ -112,10 +113,10 @@ next	MOVE #^10,A	* if 0-9
 	CMP A,B	
 	BMI lessten
 
-check1	MOVE #^20,A      *if 10-19
+check1	MOVE #^20,A     *if 10-19
 	CMP A,B
 	BMI lesstwe
-	MOVE #^26,A      *if 20-25
+	MOVE #^26,A     *if 20-25
 	CMP A,B
 	BMI lessmax
 
@@ -138,11 +139,11 @@ print3	MOVE $E3,B
 	JMP screen
 
 lessmax	MOVE #^50,A	*2 in ASCII
-	MOVE A,$E2	 *print 2
+	MOVE A,$E2	*print 2
 	
 print4	MOVE $E3,B	
-	CMP #$0,B	 *check if screen ready
-	BEQ print4          *if not loop	
+	CMP #$0,B	*check if screen ready
+	BEQ print4      *if not loop	
 	MOVE A,$E2	*if screen ready print 2
 	MOVE $F4,B	*fetch from memory
 	ADD #^28,B	*convert unit to ASCII
