@@ -2,7 +2,7 @@ A turing machine which takes two binary numbers separated by a space and adds th
 Eg, 10101 11101 
 ![image](https://user-images.githubusercontent.com/87831546/144908397-dff8e3f4-1d01-4462-811e-0d833c7aaa49.png)
 
-The machine works for adding any combination of any length of binary numbers. The turing machine has an inital state of 0. The code can be pasted into `http://morphett.info/turing/` 
+The machine works for adding any combination of any length of binary numbers. The turing machine has an inital state of 0. The code can be pasted into this turing simulator to see it work: http://morphett.info/turing/
 
 ```
 0 0 0 r 0
