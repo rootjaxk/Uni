@@ -1,1 +1,1 @@
-A holiday website programmed with hand written HTML,CSS and a tiny bit of JavaScript
+A holiday website handwritten with PHP,HTML,CSS and a tiny bit of JavaScript
