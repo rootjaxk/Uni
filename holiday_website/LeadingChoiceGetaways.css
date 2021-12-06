@@ -1,0 +1,1672 @@
+/*---------header---------*/
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.35)), url(pictures/background.jpg);/*using gradient to bring out white text more*/
+    padding-bottom:10%;
+    background-size:cover;
+    min-height:170px;/*displays better on smaller screens*/
+    background-position:center;
+    margin-top:0;
+}
+/*sticky navigation so user can always change page no matter where they are on the page (useability)*/
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1;/* always overide content*/
+}
+.navigation{
+    display:flex;/*horizontal navigation bar*/
+    justify-content:center;
+    background-color:#b84545;
+    align-items:center;
+}
+nav ul{
+    display:flex;
+    list-style:none; 
+    flex-wrap:wrap;
+    padding:0;
+    margin:0;
+}
+.logo{
+    padding:0.6%;
+}
+nav li a{
+    display:block;
+    padding:28px 40px; /*creating a bigger area to click on link*/
+    transition:0.2s;/*for smooth hover*/
+}
+nav a{
+    display:block; /*displays bigger area for to click link*/
+    text-decoration:none;
+    color:white;
+    font-size:1.1em;
+}
+nav a:visited{
+    color:white; /*keeping white even if visited link*/
+}
+nav li a:hover, a.active{
+    text-decoration:underline 2.3px rgb(218, 165, 32);/*change colour of hover, clear to user that it is a link*/
+}
+nav li a:not(.logo):hover{
+    background-color:#6e2929;/*change colour of hover, clear to user that it is a link*/
+}
+.logo_main{
+    min-width:220px;/*looks better on smaller screens*/
+    min-height:150px;
+    width:40%;
+    height:40%;
+    display:block; /*for centering image*/
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:11%;
+}
+#ham_menu {
+	display: none;/*responsive nav*/
+    font-size:1.2em;
+    text-align:left;
+}
+#main-nav.show{
+    display:flex;/*responsive nav*/
+}
+/*main*/
+body{
+    font-family: 'Lato', Sans-serif;/*Lato is a nice font on my website.*/
+    margin:0;
+    padding:0;
+}
+/*---------about section---------*/
+h1, .icons-header {
+    text-align: center;
+    color:darkgoldenrod;
+    font-size:1.9em;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+h1{
+    font-size:2em;
+}
+.about{
+    text-align:center;
+    margin-left:22%;/*Spaacing so it is aesthetic and easy to read*/
+    margin-right:22%;
+    padding-bottom:0.8%;
+    border-bottom:solid 3px #1f93a0;
+}
+/*---------Why book with us?---------*/
+.icons{
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:2%;
+}
+.icon-flex-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;/*icons nicely spaced*/
+}
+.icon-container{
+    width:28%;
+    background-color:white;
+    border-style:solid;
+    border-color:lightgrey;
+    border-radius:5px;
+    border-width:5px;
+    margin-bottom:2%;
+    transition:transform 0.4s;
+}
+.icon-container:hover{
+    transform:scale(1.05);/*increase size on hover (interactive)*/
+}
+.icon{
+    text-align:center;/*align the icons nicely*/
+    color:#1f93a0;
+    font-size:2em;
+    padding-top:2%;
+}
+h3{
+    text-align:center;
+    color:darkgoldenrod;
+}
+.icons p{
+    text-align:center;
+    padding-right:1%;
+    padding-left:1%;
+}
+/*---------What we offer---------*/
+.offers{
+    background-color:black;/* for making the images darker with less opacity*/
+    display:grid;/*grid layout for cool design*/
+	grid-template-rows:auto;
+	grid-template-columns:1fr 1fr;
+	grid-template-areas:
+    "offer offer"
+    "Cruises Spa"
+    "Honeymoons Honeymoons"
+    "Train Safari";
+}
+.offer-title{
+    grid-area:offer;
+    text-align:center;
+    background-color: #b84545;
+    color:white;
+    margin:0;
+    padding:1%;
+    font-size:1.9em;
+}
+.offer-h2{
+    font-size:3em;
+    margin-bottom:0;
+}
+.offer-p{
+    padding-bottom:30px;
+}
+.offer-text{
+    position:absolute;/*displays text over the image*/
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);/*centers the text over the image*/
+    color:white;
+    text-align:center;
+}
+.offer-text a{
+    text-decoration:none;
+    color:white;
+    padding:12px 25px;/*padding to make link more clickable*/
+    background-color:#b84545;
+    letter-spacing: 0.02em;
+    border-style:solid;
+    border-color:#a83f3f;
+    border-width: 1px;
+}
+.offer-text a:hover{
+    background-color:#a83f3f;
+    transition:0.2s;/*smooth colour change*/
+}
+.offer-link{
+    transition:transform 0.3s;/*make link larger on hover (interactive)*/
+}
+.offer-link:hover{
+    transform:scale(1.1);/*more useable link*/
+}
+.honeymoon-image{
+    opacity: 0.8;/* bring out text more*/
+    width:100%;
+    height:100%;
+    min-width:220px;
+    min-height:220px;
+}
+.spa-image, .safari-image{
+    opacity: 0.75;/* bring out text more*/
+    width:100%;
+    height:100%;
+    min-width:220px;
+    min-height:220px;
+}
+.cruise-image, .train-image{
+    opacity: 0.65; /*lighter images need darker tint to bring out text more*/
+    width:100%;
+    height:100%;
+    min-width:220px;
+    min-height:220px;
+}
+.Cruises{
+    position:relative;/*relative so text that is absolute appears over it*/
+    grid-area:Cruises;
+}
+.Cruises:hover, .Spa-holidays:hover, .Honeymoons:hover, .Train-journeys:hover, .Safaris:hover{
+    filter:brightness(90%);
+    transition:all 0.3s ease-out;/*smooth transition effect*/
+}
+.Spa-holidays{
+    position:relative;/*relative so text that is absolute appears over it*/
+    grid-area:Spa;
+}
+.Honeymoons{
+    position:relative;/*relative so text that is absolute appears over it*/
+    grid-area:Honeymoons;
+}
+.Train-journeys{
+    position:relative;/*relative so text that is absolute appears over it*/
+    grid-area:Train;
+}
+.Safaris{
+    position:relative;/*relative so text that is absolute appears over it*/
+    grid-area:Safari;
+}
+/*---------Popular Destinations---------*/
+.Popular-destinations h2{
+    text-align: center;
+    background-color: #b84545;
+    color:white;
+    margin-top:0;
+    margin-bottom:25px;
+    padding:1%;
+    font-size:1.9em;
+}
+.popular-images{
+    display:grid;/*grid layout for popular desintations, works well responsively*/
+	grid-template-rows:auto;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-areas:
+    "arizona bali kazakhstan"
+    "maldives canada new-zealand";
+    justify-content:center;/*good allignment*/
+    margin-left:10%;
+    margin-right:10%;
+}
+.arizona{
+    grid-area:arizona;
+}
+.bali{
+    grid-area:bali;
+}
+.kazakhstan{
+    grid-area:kazakhstan;
+}
+.maldives{
+    grid-area:maldives;
+}
+.canada{
+    grid-area:canada;
+}
+.new-zealand{
+    grid-area:new-zealand;
+}
+.destination-image-container{
+    position:relative;
+    bottom:-4px;/*remove gaps so looks better*/
+}
+.destination-image{
+    width:100%;
+    border-top-left-radius:10px;/*add rounded corners*/
+    border-top-right-radius:10px;
+}
+.arizona, .bali, .kazakhstan, .maldives, .canada, .new-zealand{
+    margin:8px 7px;
+    position:relative;
+}
+.destinations-rating{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:2%;
+    color:white;
+    font-size:0.85em;
+    background-color:rgb(236, 130, 0);
+    border-bottom-right-radius:10px;/* add rounded corners*/
+    border-top-left-radius:10px;
+}
+.destinations-text-container{
+    display:flex;
+    justify-content:space-between;
+    padding-bottom:2px;
+    margin-bottom:10px;
+    border: solid 2px lightgray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.destinations-text-left h3{
+    text-align:left;
+    color:#333333;
+    font-size:1.6em;
+    margin:5px;
+}
+.destinations-text-left p{
+    margin:5px;
+    color:rgb(235, 130, 1);
+}
+.destinations-text-left strong{
+    font-size:1.25em;
+    color:rgb(209, 116, 3);
+}
+.destinations-text-right{
+   margin-top:27px;
+   margin-right:10px;
+   transition:transform 0.2s;
+}
+.view-deal{
+    text-decoration:none;
+    font-size:1.05em;
+    background-color:rgb(236, 130, 1);
+    color:white;
+    padding:8px 15px;
+    border-radius:5px;
+    transition: transform 0.2s;
+}
+.view-deal:hover{
+    background-color:rgb(219, 122, 2);
+}
+.destinations-text-right:hover{
+    transform:scale(1.04);/*increase size on hover (interactive)*/
+}
+/*---------Reviews---------*/
+.Reviews h2{
+    text-align:center;
+    background-color: #b84545;
+    color:white;
+    margin-top:25px;
+    margin-bottom:10px;
+    padding:1%;
+    font-size:1.9em;
+}
+.feefo{
+    width:21%;
+    display:block;/*for centering image*/
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+    min-width:275px;/*min width for mobile screens*/
+}
+.review-container{
+    margin-left:6%;
+    margin-right:6%;
+    display:grid;/*grid layout for reviews is responsive*/
+	grid-template-rows:auto;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-areas:
+    "review1 review2 review3";
+}
+.review-stars{
+    font-size:2em;
+    color:rgb(243, 211, 31);
+    margin-top:10px;
+}
+.review-image{
+    width:52%;
+    min-width:160px;
+}
+.review-text{
+    margin-right:10%;
+    margin-left:10%;
+}
+.review-text h3{
+    color:rgb(214, 120, 4);
+    font-size:1.25em;
+    margin:15px;
+}
+.review1{
+    grid-area:review1;
+    text-align:center;
+}
+.review2{
+    grid-area:review2;
+    text-align:center;
+}
+.review3{
+    grid-area:review3;
+    text-align:center;
+}
+/*---------Blogs---------*/
+/*This was the most challenging css on my website: 3 different grids for responsive layout, positioning date, title of blog and arrows over images on all different grids and preventing overflow when hovering (zooming in) on the blog*/
+.blog h2{
+    position:relative;
+    bottom:-13px;/*for neat allignment*/
+    text-align:center;
+    background-color: #b84545;
+    color:white;
+    margin-top:25px;
+    margin-bottom:0;
+    padding:1%;
+    font-size:1.9em;
+}
+.article-container{
+    position:relative;
+    margin:0;
+    bottom:-8px;/*for neat allignment*/
+    overflow:hidden;/*stop the transparent text spilling out*/
+    display:grid;
+	grid-template-rows:auto;
+	grid-template-columns:2.4fr 1fr;
+	grid-template-areas:
+    "blog1 blog2"
+    "blog1 blog3";
+}
+/*main article*/
+.blog-main{
+    grid-area:blog1;
+    position:relative;
+    bottom:-5px;/*neat allignment*/
+    overflow:hidden;
+    max-height:98.4%;/*preventing overflows on zooming in*/
+}
+.blog-main i.fas{
+    position:absolute;/*display over image*/
+    right:0;
+    top:37%;
+    margin-right:90px;
+    font-size:1.5em;
+}
+.article-text h3{
+    position:absolute;/*display over image*/
+    bottom:0;
+    margin-bottom:0;
+    background:rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    width:100%;
+    padding:30px;
+    color:white;
+    font-size:1.5em;
+    text-align:left;
+}
+.date-main{
+    font-size:2.5em;
+    border-bottom-right-radius:20px;
+}
+.date-main p{
+    margin:0;
+    padding:25px;
+}
+article strong{
+    font-size:1.3em;
+}
+/*two aside articles*/
+aside strong{
+    font-size:1.2em;
+}
+.blog-aside1{
+    grid-area:blog2;
+    position:relative;
+    bottom:-5px;
+    overflow:hidden;/*stop the transparent text spilling out*/
+}
+.blog-aside2{
+    grid-area:blog3;
+    position:relative;
+    overflow:hidden;
+    max-height:98%;/*preventing overflows on zooming in*/
+}
+.blog-image1, .blog-image2, .blog-image3{
+    width:100%;
+    transition:transform .5s;
+}
+.blog-image1:hover, .blog-image2:hover, .blog-image3:hover{
+    transform:scale(1.05);/*zoom into the image on hovering - cool and interactive for the user*/
+}
+.date, .date-main{
+    position:absolute;/*display over image*/
+    top:0;/*display in the top left*/
+    left:0;
+    color:white;
+    font-size:1.4em;
+    background-color:darkgoldenrod;
+    border-bottom-right-radius:7px;
+}
+.date p{
+    margin:0;
+    padding:8px;
+}
+.blog-aside1 .aside-text h3{
+    padding-bottom:15px;
+}
+.aside-text h3{
+    position:absolute;/*display over the image*/
+    bottom:0;
+    margin-bottom:0;
+    background:rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    width:100%;
+    padding:12px;
+    color:white;
+    text-align:left;
+}
+.blog-aside1 i.fas, .blog-aside2 i.fas{
+    position:absolute;/*display over the image*/
+    right:0;
+    top:30%;
+    margin-right:40px;
+    font-size:1.15em;
+   
+}
+/*---------footer---------*/
+footer{
+    background-color:#b84545;
+    padding-top:1%;
+    margin-bottom:-5px;/*neat allignment*/
+}
+.footerContainer{
+    display:flex;/*flex the sections - will turn to grid on minimising screen size*/
+    flex-wrap:wrap;
+    margin-right:2%;
+    margin-left:2%;
+    text-align:center;
+}
+/*logo*/
+.logo_footer{
+    align-self:center;/*change for large screen*/
+}
+/*Quick Links*/
+.links_footer li a{
+    padding-bottom:4%;/*make quick links spaced out*/
+}
+footer h4{
+    font-size:1.5em;
+    text-decoration:underline 2.3px goldenrod;
+    color:white;
+    margin:0;
+}
+footer a{
+    display:block; /*displays bigger area for to click link*/
+    text-decoration:none;
+    color:white;
+}
+footer li a:hover{
+    text-decoration:underline 2.3px goldenrod;/*change colour of hover*/
+    transform:scale(1.04);/*increase size on hover (interactive)*/
+}
+/*Contact Us*/
+.footer_contactlist{
+    padding-top:4%;
+}
+footer p{
+    margin:0;
+    color:white;
+}
+footer i.fas, footer i.far, footer i.fab, .contact{ /*color icons white*/
+    color:white;
+    padding-bottom:8%;  /*makes contact info spaced out*/
+}
+ul{
+    list-style:none;
+    padding-left:0;
+}
+/*Follow Us*/
+.follow_footer{
+    margin-bottom:0px;
+}
+.follow_footer ul{
+    display:flex;
+}
+.follow_footer li a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5em;
+    width:38px;
+    height:38px;
+    background:#222;
+    margin-right:2.5px;
+    margin-left:2.5px; /*spacing between icons*/
+    border-radius:4px;/* add rounded corners*/
+    transition:transform 0.3s;/*smooth transation*/
+}
+.follow_footer li a:hover{
+    text-decoration:none;
+    background-color:rgb(75, 71, 71);/*change cover so obvious to user they are hovering over it*/
+    transform:scale(1.09);/*increase size on hover (interactive)*/
+}
+.trustpilot{
+    margin-left:-4px
+}
+/*---------very bottom footer---------*/
+.copyright{
+    background:#1d1d1d;
+    padding:1%;
+}
+.copyright h5{
+    font-size:1em;
+    color:white;
+    margin:0;
+    text-align:center;
+}
+.copyright li{
+    padding-top:1%;
+}
+/*---------View Holidays page---------*/
+.view-holiday{
+    margin-top:2%;
+}
+.view-holiday h2{
+    display:none;
+}
+.view-holidays-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.holiday-container{
+    display:flex;
+    flex-direction:column;
+    width:28%;
+    margin:1%;
+}
+/*holiday image*/
+.holiday-image-container{
+    position:relative;
+    bottom:-4px;/*align image with title cleanly*/
+    border-top-right-radius:10px;/*curve edges of image at top right*/
+    border-top-left-radius:10px;/*curve edges of image at top left*/
+}
+.holiday-image{
+    width:100%;
+    border-top-right-radius:10px;/*curve edges of image at top right*/
+    border-top-left-radius:10px;/*curve edges of image at top left*/
+}
+.holiday-image-text{
+    position:absolute;
+    top:0;
+    right:0;
+    padding-left:2%;
+    padding-right:2%;
+    margin-right:5%;
+    color:white;
+    background-color:green;
+    font-size:1.1em;
+    border-bottom-left-radius:10px;/* add rounded corners*/
+    border-bottom-right-radius:10px;/* add rounded corners*/
+}
+/*holiday title*/
+.holiday-icons span{
+    padding-left:1%;
+}
+.h3-holiday{
+    text-align:left;
+    color:white;
+    font-size:1.6em;
+    margin-bottom:2px;
+    margin-top:0;
+}
+.holiday-title-container{
+    position:relative;
+    padding-bottom:1%;
+    padding-left:1%;
+    background-color:rgb(0,130,130);
+}
+.holiday-rating{
+    margin-right:2%;
+    padding-top:1.5%;
+    color:gold;
+}
+.holiday-rating p{
+    display:none;/* only display when not overlapping with title*/
+    margin:0;
+}
+/*holiday icons*/
+.holiday-icons{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    padding-left:2%;
+    padding-top:20px;
+}
+.holiday-icons i.fas{
+    color:rgb(0,130,130);
+}
+/*holiday description*/
+.holiday-description{
+    padding-left:10px;
+    padding-right:10px;
+    height:100px;/* to make all the holiday containers the same size*/
+    display: table-cell;/*from googling how to center vertically*/
+    vertical-align: middle;
+}
+.holiday-description p{
+    margin:0;
+    padding-bottom:20px;
+}
+/*price and book now*/
+.holiday-book{
+    display:flex;
+    justify-content:space-between;
+}
+.price{
+    margin:5px;
+    padding:2%;
+    font-size:2.3em;
+}
+.book{
+    background-color:green;
+    padding:4% 10%;
+    margin:8px;
+    color:white;
+    border-radius:5px;
+    text-align:center;
+    font-size:1.3em;
+    text-decoration:none;
+    transition:transform .2s;
+}
+.book:hover{
+    background-color:rgb(1, 107, 1);
+    transform:scale(1.03);
+}
+/*border*/
+.holiday-details{
+    border:solid 2px rgb(0,130,130);
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+/*---------Admin page---------*/
+.h1-admin{
+    border-bottom:solid 3px #1f93a0;
+    margin-left:10%;
+    margin-right:10%;
+    padding-bottom:1%;
+}
+form{
+    margin-left:auto;/*displaying form in center of page*/
+    margin-right:auto;
+    margin-bottom:2%;
+    width:50%;
+}
+fieldset{
+   background-color:rgb(229, 229, 229);
+   border-radius:6px;
+   padding:2%;
+   border-color:#1f93a0;
+}
+legend{
+    font-size:1.2em;
+}
+textarea{
+    width:1fr;/*creating big area for holiday description*/
+    height:110px;
+}
+.form-input{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap:12px;
+}
+label{
+    grid-column:1/2;/*creating a neat form*/
+    text-align:right;
+    padding-top:5px;
+}
+.category{
+    padding-right:3px;
+}
+input, select, textarea{
+    grid-column:2/3;
+    padding:8px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius:4px;
+}
+input[type=submit]{/*the submit holiday button*/
+    color:white;
+    background-color:#21A1AF;
+    border:none;
+    border-radius:4px;
+    padding:14px 20px;
+    cursor:pointer;/*view as cliclable*/
+    font-size:1.2em;
+}
+input[type=submit]:hover {
+    background-color:#1f93a0;/*change colour on hover so obvious user can click it*/
+}
+.hol-cat{
+    display:flex;/*align radio buttoms neatly*/
+}
+.hol-cat input{
+    margin-top:9px;
+    margin-bottom:9px;
+}
+/*---------Credits page---------*/
+.details{
+    margin-left:18%;
+    margin-right:18%;
+}
+.h1-credits{
+    border-bottom:solid 3px #1f93a0;
+    margin:10px 10%;
+    padding-bottom:10px;
+}
+.credit-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+.course{
+    text-align:center;
+}
+.credit{
+    width:200px;
+    min-width:200px;
+    text-align:center;
+}
+.credit h2{
+    text-decoration:underline;
+}
+.security-considerations p{
+    margin:1% 8%;
+    padding-bottom:10px;
+    line-height:1.3;/*making it easier to read*/
+}
+.security-considerations h2{
+    text-align:center;
+    color:darkgoldenrod;
+    font-size:1.9em;
+    padding-bottom:10px;
+    border-bottom:solid 3px #1f93a0;
+    margin:1% 25%;
+}
+.references h2{
+    text-align:center;
+    background-color:#b84545;
+    color:white;
+    margin-top:0;
+    margin-bottom:25px;
+    padding: 1%;
+    font-size:1.9em;
+}
+.references p{
+    padding-top:1px;
+    overflow-wrap:break-word;/*to make the long references responsive*/
+}
+.reference-container{
+    margin:0 8%;
+}
+.references h3{
+    text-align:left;
+    text-decoration:underline #1f93a0;
+    font-size:1.75em;
+    margin-bottom:10px;
+}
+.planning div{
+    margin-bottom:20px;
+}
+.explanation{
+    color:#ad4343;
+    font-size:1.3em;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+/*---------New holiday preview page---------*/
+.h1-newholiday{
+    margin-bottom:0;
+    border-bottom:solid 3px #1f93a0;
+    margin:15px 26%;
+}
+.database{
+    text-align:center;
+    margin-top:0;
+}
+.go-back{/*creaing a clear go back button*/
+    display:block;
+    text-decoration:none;
+    color:white;
+    background-color:#b84545;
+    text-align:center;
+    margin-left:38%;
+    margin-right:38%;
+    margin-bottom:40px;
+    padding:1% 5%;
+    border-radius:5px;
+    font-size:1.3em;
+    transition:transform .2s;/*smooth transition*/
+}
+.go-back:hover{
+    background-color:#a83f3f;
+    transform:scale(1.03);/*becomes larger on hover*/
+}
+/*---------media queries for New holiday page---------*/
+@media screen and (max-width:800px){
+    .go-back{
+        margin-left:30%;/*making the go back button neat on smaller screens*/
+        margin-right:30%;
+        margin-top:1%;
+        padding:2% 5%;
+    }
+    .h1-newholiday{
+        margin:15px 8%;
+        padding-bottom:8px;
+    }
+}
+/*---------media queries for admin page---------*/
+@media screen and (max-width:1450px){
+    form{
+        width:720px;
+    }
+}
+@media screen and (max-width:750px){
+    form{
+        width:500px;/*fit tablets better*/
+    }
+    .form-input{
+        grid-template-columns:1fr;
+        grid-gap:4px;
+    }
+    label{
+        grid-column:1;
+        text-align:left;
+    }
+    input, select, textarea{
+        grid-column:1;
+
+    }
+    .hol-cat{
+        flex-wrap:wrap;
+        justify-content: center;
+        margin-bottom:-12px;
+    }
+    .category{
+        display:flex;
+        margin:1% 3%;
+    }
+    input[type=submit]{
+        margin-top:5px;
+    }
+}
+@media screen and (max-width:550px){
+    form{
+        width:290px;/*form for mobiles*/
+    }
+    .hol-cat{
+        margin-bottom:-10px;
+    }
+}
+/*---------media queries for credits page---------*/
+@media screen and (max-width:600px){
+    .details{
+        margin-left:0;
+        margin-right:0;
+    }
+    .security-considerations h2{
+        margin:3% 18%;
+    }
+}
+/*---------media queries for View holidays---------*/
+@media screen and (min-width: 1750px){/*move the position of the star rating to not overlap with title*/
+    .holiday-title-container{
+        position:relative;
+        display:flex;
+        padding-bottom:1%;
+        padding-left:1%;
+    }
+    .holiday-rating{
+        position:absolute;/*move position of rating stars from very large screens to large screen*/
+        right:0;
+        margin-right:2%;
+        padding-top:1%;
+    }
+    .holiday-rating p{
+        display:block;
+        margin:0;
+        text-align:center;
+    }
+}
+@media screen and (max-width: 1700px){
+    .h3-holiday{
+        font-size:1.4em;
+    }
+    .holiday-description{
+        height:120px;/*to make all holiday containers the same size*/
+    }
+    .price{
+        font-size:2em;
+    }
+    .book{
+        padding:4% 9%;
+    }
+}
+@media screen and (max-width:1420px){/*display holidays horozontal*/
+    .holiday-container{
+        flex-direction:row;
+        justify-content:center;
+    }
+    .holiday-container{
+        width:80%;
+    }
+    .holiday-image-container{
+        min-width:620px;
+        max-width:620px;
+        bottom:0px;
+    }
+    .holiday-details{
+        min-width:320px;
+    }
+    .holiday-description{
+        height:100px;
+    }
+    .holiday-image{
+        border-bottom-left-radius:10px;
+        border-top-right-radius:0px;
+    }
+    /*make the right corners curved*/
+    .holiday-details{
+        border-bottom-left-radius:0px;
+        border-top-right-radius: 10px;
+        margin-bottom:3px;/* to align the bottom of the box with image neatly*/
+    }
+    .holiday-title-container{
+        border-top-right-radius:6px;
+    }
+}
+@media screen and (max-width:1290px){
+    .holiday-image-container{
+        min-width:550px;
+        max-width:550px;
+    }
+    .holiday-details{
+        font-size:0.9em;
+    }
+    .holiday-icons{
+        padding-top:10px;
+    }
+    .holiday-description p{
+        padding-bottom:4px;
+    }
+    .logo_main{
+        padding-top:11%;
+    }
+}
+@media screen and (max-width:920px){/*one column vertical holidays*/
+    .holiday-container{
+        flex-direction:column;
+        align-items:center;
+    }
+    .holiday-details{
+        width:547px;
+        font-size:1em;
+    }
+    .holiday-description{
+        height:70px;
+    }
+    .holiday-image-container{
+        position:relative;
+        bottom:-4px;
+    }
+    .holiday-image{
+        border-bottom-left-radius:0px;
+        border-top-right-radius:10px;
+    }
+    .holiday-details{
+        border-bottom-left-radius:10px;
+        border-top-right-radius:0px;
+    }
+    .holiday-title-container{
+        border-top-right-radius:0px;
+    }
+}
+@media screen and (max-width:600px){
+    .holiday-image-container{
+        min-width:350px;
+        max-width:350px;
+    }
+    .holiday-details{
+        width:347px;
+    }
+}
+@media screen and (max-width:400px){
+    .holiday-image-container{
+        min-width:270px;
+        max-width:270px;
+    }
+    .holiday-details{
+        min-width:267px;
+        max-width:267px;
+    }
+    .holiday-title-container{
+        padding-bottom:5px;
+    }
+    .price{
+        margin-top:15px;
+    }
+    .book{
+        padding:10px;
+    }
+}
+/*---------media queries for Home page---------*/
+/*for large screens nice even footer*/
+@media screen and (min-width: 780px){
+    .footerContainer{
+        justify-content:space-evenly;
+    }
+}
+@media screen and (max-width: 860px){
+    nav li a{
+        padding:28px 30px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .logo_main{
+        margin-top:5%;
+    }
+}
+/*adjusting nav and footer for tablet view*/
+@media screen and (max-width: 780px){
+    nav li a{
+        padding:28px 13px;
+    }
+    .footerContainer{/*change footer from flex to grid, looks nice with logo above the three footer sections*/
+        display: grid;
+	    grid-template-rows: auto;
+	    grid-template-columns: 0.85fr 1.2fr 0.85fr;
+	    grid-template-areas:
+		"logo logo logo"
+        "links contact follow";
+    }
+    .logo_footer{
+        grid-area:logo;
+        justify-self:center;
+        width:10%;
+        padding-bottom:2%;
+        min-width:60px;
+    }
+    .links_footer{
+        grid-area:links;
+        text-align:center;
+    }
+    .contact_footer{
+        grid-area:contact;
+        text-align: center;
+    }
+    .followContainer{
+        grid-area:follow;
+        justify-self: center;
+        text-align:center;
+    }
+    span{
+        font-size: 0.9em;
+    }
+    footer a{
+        font-size: 0.9em;
+    }
+}
+/*mobile navigation + footer */
+@media screen and (max-width: 600px){
+    #ham_menu {
+		display:block;
+        position:absolute;/*display top left of screen wherever you are on mobile page*/
+        top:0;
+        left:0;
+        padding:1.5%;
+        font-size:1.8em;
+        background-color:rgba(109, 109, 109, 0.521);
+        cursor:pointer;/*looks clickable*/
+    }
+    nav ul {
+		display:none;
+        flex-direction:column;
+        width:100%;
+	}
+    nav li a{
+        display:block;
+        padding:8px 0px;
+        text-align:center;
+        font-size:0.85em;
+    }
+    /*stick to center*/
+    .logo{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:65px;
+    }
+    .logo_main{
+        margin-top:0;
+    }
+    .footerContainer{
+        display: grid;
+	    grid-template-rows: auto;
+	    grid-template-columns: 1fr;
+	    grid-template-areas:
+		    "logo"
+            "links"
+            "contact"
+            "follow";
+    }
+    footer i.fas, footer i.far, footer span{
+        padding-bottom:3%;/*makes contact info spaced out*/
+    }
+    .footer_contactlist{
+        padding-top:2%;
+    }
+    .links_footer li a{
+        padding-bottom:2%;/*make quick links spaced out*/
+    }
+    h1{
+        font-size:1.7em;
+    }
+}
+/*Why book with us*/
+@media screen and (max-width: 1600px){
+    .about{
+        margin-left:15%;
+        margin-right:15%;
+    }
+}
+@media screen and (max-width: 1300px){
+    h1,h2, .icons-header{
+        font-size:1.8em;
+    }
+    .about{
+        margin-left:12%;
+        margin-right:12%;
+    }
+}
+@media screen and (max-width: 1100px){
+    .icons{
+        margin-left:9%;
+        margin-right:9%;
+    }
+    .icon-container{
+        padding-right:8%;
+        padding-left:8%;
+        min-width:150px;
+        margin-left:4px;
+    }
+    .icon-holder h3{
+        margin:4%;
+    }
+    .icon-text{
+        margin-top:4%;
+    }
+}
+@media screen and (max-width: 600px){
+    .about p{
+        font-size:0.95em;
+    }
+    .icon-container{
+        font-size:0.95em;
+        min-width:205px;/*min width for mobiles*/
+    }
+    .icons{
+        margin-left:5%;
+        margin-right:5%;
+    }
+    h1,.icons-header{
+        font-size:1.6em;
+    }
+    .icon-container{
+        margin-bottom:10px;
+    }
+}
+/*What we offer*/
+@media screen and (min-width: 1380px){
+    .offer-h2{
+        font-size:3.3em;
+    }
+}
+@media screen and (max-width: 1250px){
+    .offer-title, .Popular-destinations h2{
+        font-size:1.8em;
+    }
+    .offer-h2{
+        font-size:2.8em;
+    }
+}
+@media screen and (max-width: 1165px){
+    .offer-h2{
+        font-size:2.6em;
+    }
+}
+@media screen and (max-width: 1086px){
+    .offer-h2{
+        font-size:2.3em;
+    }
+}
+@media screen and (max-width: 960px){
+    .offer-h2{
+        font-size:2.1em;
+    }
+    .offer-text a{
+        padding:10px 17px;
+    }
+}
+@media screen and (max-width: 875px){
+    .offer-h2{
+        font-size:1.9em;
+    }
+}
+@media screen and (max-width: 825px){
+    .offer-h2{
+        font-size:1.8em;
+    }
+    .offer-link{
+        font-size:0.9em;
+    }
+}
+@media screen and (max-width: 770px){
+    .offers{
+        grid-template-rows:48px 1fr 1fr 1fr 1fr 1fr;/*making all section the same size for one column grid*/
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "offer"
+        "Cruises"
+        "Spa"
+        "Honeymoons"
+        "Train "
+        "Safari";
+    }
+    .offer-h2{
+        font-size:2.4em;
+    }
+    .offer-text a{
+        font-size:1em;
+    }
+} 
+@media screen and (max-width:600px){
+    .Popular-destinations h2{
+        font-size:1.6em;
+    }
+}
+@media screen and (max-width: 500px){
+    .offers{
+        grid-template-rows:40px 1fr 1fr 1fr 1fr;
+    }
+    .offer-title, .Reviews h2{
+        font-size:1.6em;
+    }
+    .offer-h2{
+        font-size:2.1em;
+    }
+    .offer-text a{
+        font-size:0.9em;
+        padding:8px 14px;
+    }
+}
+@media screen and (max-width: 440px){
+    .offer-h2{
+        font-size:1.9em;
+    }
+    .offer-p{
+        font-size:0.95em;
+    }
+}
+@media screen and (max-width: 400px){
+    .offers{
+        grid-template-rows:35px 1fr 1fr 1fr 1fr;
+    }
+    .offer-title{
+        font-size:1.4em;
+    }
+    .Reviews h2{
+        padding:1.5%;
+        font-size:1.4em;
+    }
+    .offer-h2{
+        font-size:1.7em;
+    }
+    .offer-p{
+        font-size:0.8em;
+        padding-bottom:15px;
+    }
+}
+@media screen and (max-width: 360px){
+    .offer-h2{
+        font-size:1.5em;
+    }
+    .offer-p{
+        font-size:0.8em;
+        padding-bottom:10px;
+    }
+    .offer-text a{
+        font-size:0.8em;
+        padding:6px 12px;
+    }
+}
+@media screen and (max-width: 312px){
+    .offer-h2{
+        font-size:1.35em;
+    }
+    .offer-p{
+        font-size:0.7em;
+        padding-bottom:5px;
+    }
+    .offer-text a{
+        font-size:0.7em;
+        padding:6px 12px;
+    }
+}
+/*Popular Destinations*/
+@media screen and (max-width: 1670px){
+    .popular-images{
+        margin-right:8%;
+        margin-left:8%;
+    }
+}
+@media screen and (max-width: 1470px){
+    .destinations-text-left h3{
+        font-size:1.5em;
+    }
+}
+@media screen and (max-width: 1275px){
+    .view-deal{
+        font-size:0.97em;
+    }
+}
+@media screen and (max-width: 1140px){
+    .destinations-text-left h3{
+        font-size:1.3em;
+    }
+    .view-deal{
+        font-size:0.9em;
+    }
+    .destinations-text-right{
+        margin-right:7px;
+    }
+}
+@media screen and (max-width: 1022px){/*two column*/
+    .popular-images{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+        "arizona bali"
+        "kazakhstan maldives"
+        "canada new-zealand";
+    }
+}
+@media screen and (max-width: 662px){/*one column*/
+    .popular-images{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "arizona"
+        "bali"
+        "kazakhstan"
+        "maldives"
+        "canada"
+        "new-zealand";
+    }
+    .Popular-destinations h2{
+       margin-bottom:20px;
+    }
+    .arizona, .bali, .kazakhstan, .maldives, .canada, .new-zealand{
+        margin:0;
+    }
+}
+@media screen and (max-width: 400px){
+    .destination-image{
+        min-width:265px;
+    }
+    .popular-images{
+        margin-left:10%;
+        margin-right:10%;
+    }
+    .Popular-destinations h2{
+        font-size:1.4em;
+    }
+    .view-deal{
+        font-size:0.85em;
+    }
+    .Popular-destinations h2{
+        margin-bottom:15px;
+     }
+}
+/*Reviews*/
+@media screen and (max-width:1150px){
+    .review-stars{
+        font-size:1.7em;
+    }
+}
+@media screen and (max-width:1000px){
+    .review-container{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+        "review1 review2"
+        "review3 review3"
+    }
+    .review-image{
+        width:240px;
+    }
+}
+@media screen and (max-width:662px){
+    .review-container{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "review1"
+        "review2"
+        "review3";
+    }
+    .review-image{
+        max-width:250px;
+        width:60%;
+    }
+    .review-text{
+        margin-bottom:50px;
+    }
+}
+/*Blog - wow this was complicated to get everything aligned nicely*/
+@media screen and (max-width:1550px){
+    .aside-text h3{
+        font-size:1em;
+    }
+    .blog-main{
+        max-height:98.05%;/*preventing overflows on the bottom zooming in/*/
+    }
+}
+@media screen and (max-width:1350px){
+    .aside-text h3{
+        font-size:0.92em;
+    }
+}
+@media screen and (max-width:1250px){
+    /*changing layout of blog grid*/
+    .article-container{
+        bottom:-18px;
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+        "blog1 blog1"
+        "blog2 blog3";
+    }
+    /*getting the grid to fit nicely*/
+    .blog-aside2{
+        bottom:0;
+        top:-9px;
+    }
+    .blog-aside1{
+        bottom:0;
+        top:-9px;
+        max-height:98%;
+    }
+    .article-text h3{
+        padding:3.5%;
+    }
+    .blog-main i.fas{
+        top:30%;
+        margin-right:10%;
+    }
+    .aside-text h3{
+        font-size:1.2em;
+    }
+    .date-main p{
+        padding:20px;
+    }
+    .blog h2{
+        bottom:-23px;
+    }
+}
+@media screen and (max-width:950px){
+    .aside-text h3{
+        font-size:1em;
+    }
+}
+@media screen and (max-width:800px){
+    .aside-text h3{
+        font-size:0.95em;
+    }
+}
+@media screen and (max-width:765px){
+    /*blog grid 1 column*/
+    .article-container{
+        bottom:-19px;
+        grid-template-columns:1fr;
+        grid-template-rows:0.8fr 0.8fr 0.8fr;
+        grid-template-areas:
+        "blog1"
+        "blog2"
+        "blog3";
+    }
+    .aside-text h3{
+        padding:3.5%;
+    }
+    .blog-aside1{
+        top:-3px;
+    }
+    .blog-aside2{
+        top:-11px;
+    }
+    .blog-aside1 i.fas, .blog-aside2 i.fas{
+        top:30%;
+        margin-right:10%;
+    }
+    .blog h2{
+        bottom:-24px;
+    }
+    /*making all fonts same size*/
+    .blog-aside i.fas, .blog-aside2 i.fas, .blog-main i.fas{
+        font-size:1.2em;
+    }
+    .blog-main h3, .aside-text h3{
+        font-size:1.2em;
+    }
+    /*making dates all same size*/
+    .date, .date-main{
+        font-size:1.2em;
+        border-bottom-right-radius:10px;
+    }
+    .date p, .date-main p{
+        padding:12px;
+    }
+    article strong, aside strong{
+        font-size:1.3em;
+    }
+}
+@media screen and (max-width:600px){
+    .article-container{
+        bottom:-16px;
+    }
+    .blog-main h3, .aside-text h3{
+        font-size:1em;
+    }
+    .date p, .date-main p{
+        padding:8px;
+    }
+    .blog-aside2{
+        top:-9px;
+    }
+    .blog h2{
+        bottom:-21px;
+    }
+}
+@media screen and (max-width:500px){
+    .article-container{
+        bottom:-15px;
+    }
+    .blog-main h3, .aside-text h3{
+        font-size:0.9em;
+    }
+    .blog h2{
+        font-size:1.6em;
+    }
+}
+@media screen and (max-width:400px){
+    .blog h2{
+        font-size:1.4em;
+        bottom:-20px;
+    }
+}
+@media screen and (max-width:372px){
+    .blog-main h3, .aside-text h3{
+        font-size:1.01em;
+        padding-left:6px;
+    }
+    .article-container{
+        grid-template-rows:0.9fr 0.9fr 0.9fr;
+    }
+    .blog-image1, .blog-image2, .blog-image3{
+        min-height:250px;
+    }
+}
+@media screen and (max-width:332px){
+    .article-container{
+        bottom:-14px;
+    }
+    .blog-main h3, .aside-text h3{
+        font-size:0.93em;
+    }
+}

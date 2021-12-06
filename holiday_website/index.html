@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="LeadingChoiceGetaways.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"><!--using google font-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--For mobile devices-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">  <!--favicon (logo in tab)-->
+    <script src="https://kit.fontawesome.com/cb47974c5e.js" crossorigin="anonymous"></script>  <!--using fontawesome for icons-->
+    <script src="responsive_menu.js"></script>   <!--hamburger menu-->
+    <title>Leading Choice Getaways</title>
+</head>
+
+<body>
+    <!--Navigation and head of page with logo-->
+    <header>
+        <nav class="navigation">
+            <a id="ham_menu">&#9776;</a><!--for mobile menu-->
+            <ul id="main-nav">
+                <li><a class="logo" href="index.html"><img class="logo" src="pictures/logo.png" alt="Companylogo"></a></li><!--making the logo click home-->
+                <li><a class="active" href="index.html">Home</a></li><!--active shows current page underlined-->
+                <li><a href="view-holidays.php">View Holidays</a></li>
+                <li><a href="admin.php">Admin</a></li>
+                <li><a href="credits.html">Credits</a></li>
+                <li><a href="wireframes.pdf">Wireframes</a></li>
+            </ul>
+        </nav>
+        <img class="logo_main" src="pictures/logomain.png" alt="logo"><!--main logo across waves image-->
+    </header>
+
+    <main>
+        <!--Introduction to the company-->
+        <section class="about">
+            <h1>We are experts in offering luxury and specialist holidays</h1>
+            <p>We are leaders in offering the most luxurious destinations and we offer hotels and experiences that are simply unforgettable.
+            Destinations such as Monaco, Cyprus and Bali are all within a click of a button with us. Prepare to be inspired by browsing through our 
+            exquisite selection of handpicked luxurious getaways for a price you wouldn't even believe is possible. Take a look at why we are rated the
+            best luxury holiday company in Europe!</p>
+        </section>
+
+        <!--Why book with us?-->
+        <section class="icons">
+            <h2 class="icons-header">Why book with us?</h2>
+            <div class="icon-flex-container"><!--container to flex all icons-->
+                <article class="icon-container"><!--each icon container is an article (self contained content)-->
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>5-Star Reviews</h3>
+                        <p class="icon-text">We take pride in maintaining the highest level of customer satisfaction</p>
+                    </div>
+                </article>
+                <article class="icon-container">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Award Winning Getaways</h3>
+                        <p class="icon-text">We have won 'best luxury getaway' award 3 years in a row!</p>
+                    </div>
+                </article>
+                <article class="icon-container">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Flexible Booking</h3>
+                        <p class="icon-text">Change the dates, destination or cancel your getaway up to a week before
+                            your flight</p>
+                        </div>
+                </article>
+                <article class="icon-container">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h3>Huge Range Of Destinations</h3>
+                        <p class="icon-text">We offer getaways covering all areas of the globe</p>
+                    </div>
+                </article>
+                <article class="icon-container">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3>Handpicked Getaways</h3>
+                        <p class="icon-text">We make sure each getaway is all inclusive and fufills the 5-star luxury
+                            experience</p>
+                    </div>
+                </article>
+                <article class="icon-container">
+                    <div class="icon-holder">
+                        <div class="icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Refund Garuntee</h3>
+                        <p class="icon-text">A full refund within 30 days if Covid-19 affects your travel</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--What we offer-->
+        <section class="offers">
+            <h2 class="offer-title">What we offer</h2>
+            <div class="Cruises">
+                <img class="cruise-image" src="pictures/cruise.jpg" alt="Cruise">
+                <div class="offer-text"><!--display text over image-->
+                    <h2 class="offer-h2">Cruises</h2>
+                    <p class="offer-p">Feel the breeze</p>
+                    <div class="offer-link">
+                        <a href="view-holidays.php">View Cruises</a><!--link takes user to view holidays page-->
+                    </div>
+                </div>
+            </div>
+            <div class="Spa-holidays">
+                <img class="spa-image" src="pictures/spa.jpg" alt="Spa">
+                <div class="offer-text"><!--display text over image-->
+                    <h2 class="offer-h2">Spa Holidays</h2>
+                    <p class="offer-p">Relax in one of our luxury spas</p>
+                    <div class="offer-link">
+                        <a href="view-holidays.php">View Spas</a><!--link takes user to view holidays page-->
+                    </div>
+                </div>
+            </div>
+            <div class="Honeymoons">
+                <img class="honeymoon-image" src="pictures/honeymoon.jpg" alt="Honeymoon">
+                <div class="offer-text"><!--display text over image-->
+                    <h2 class="offer-h2">Honeymoons</h2>
+                    <p class="offer-p">Whisk your partner away</p>
+                    <div class="offer-link">
+                        <a href="view-holidays.php">View Honeymoons</a><!--link takes user to view holidays page-->
+                    </div>
+                </div>
+            </div>
+            <div class="Train-journeys">
+                <img class="train-image" src="pictures/train.jpg" alt="Train">
+                <div class="offer-text"><!--display text over image-->
+                    <h2 class="offer-h2">Train Journeys</h2>
+                    <p class="offer-p">Breathe fresh air into your roadtrip</p>
+                    <div class="offer-link">
+                        <a href="view-holidays.php">View Train Journeys</a><!--link takes user to view holidays page-->
+                    </div>
+                </div>
+            </div>
+            <div class="Safaris">
+                <img class="safari-image" src="pictures/safari.jpg" alt="Safari">
+                <div class="offer-text"><!--display text over image-->
+                    <h2 class="offer-h2">Safaris</h2>
+                    <p class="offer-p">Explore the wildlife</p>
+                    <div class="offer-link">
+                        <a href="view-holidays.php">View Safaris</a><!--link takes user to view holidays page-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Popular Destinations-->
+        <section class="Popular-destinations">
+            <h2>Popular Destinations</h2>
+            <div class="popular-images">
+                <div class="arizona">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/arizona.jpg" alt="Arizona">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>Grand Canyon</h3>
+                            <p>from <strong>£900</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+                <div class="bali">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/bali.jpg" alt="Bali">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>Bali</h3>
+                            <p>from <strong>£1600</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+                <div class="kazakhstan">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/kazakhstan.jpg" alt="Kazakhstan">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>Kazakhstan</h3>
+                            <p>from <strong>£700</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+                <div class="maldives">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/maldives.jpg" alt="Maldives">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>Maldives</h3>
+                            <p>from <strong>£2000</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+                <div class="canada">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/canada.jpg" alt="Canada">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>Niagara Falls</h3>
+                            <p>from <strong>£1000</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+                <div class="new-zealand">
+                    <div class="destination-image-container"><!--image and rating over image-->
+                        <img class="destination-image" src="pictures/new-zealand.jpg" alt="New Zealand">
+                        <div class="destinations-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                       
+                    </div>
+                    <div class="destinations-text-container"><!--text section under image-->
+                        <div class="destinations-text-left">
+                            <h3>New Zealand</h3>
+                            <p>from <strong>£750</strong>pp</p>
+                        </div>
+                        <div class="destinations-text-right">
+                            <a class="view-deal" href="view-holidays.php">View Deal <i class="fas fa-arrow-right"></i></a><!--link takes user to view-holidays page-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--What our customers think-->
+        <section class="Reviews">
+            <h2>What our customers think</h2>
+            <img class="feefo" src="pictures/feefo.png" alt="feefo-reviews"><!--display feefo at the top-->
+            <div class="review-container">
+                <div class="review1">
+                    <img class="review-image" src="pictures/review1.png" alt="Chantelle"><!--image-->
+                    <div class="review-stars"><!--stars-->
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text"><!--text for review-->
+                        <h3>Chantelle</h3>
+                        <p>Customer service were amazing when I had to rebook my holiday because of covid!
+                        The staff made the experience completely stress free!</p>
+                    </div>
+                </div>
+                <div class="review2">
+                    <img class="review-image" src="pictures/review2.png" alt="Susie & Will">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <h3>Susie & Will</h3>
+                        <p>It was really easy to use the website and find our perfect holiday! We stayed in Bali and 
+                        it was worth every penny! Me and my wife really recommend Leading Choice Getaways</p>
+                    </div>
+                </div>
+                <div class="review3">
+                    <img class="review-image" src="pictures/review3.png" alt="James">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        <h3>James</h3>
+                        <p>Booking with Leading Choice Getaways has been a pleasure. My holiday to the Maldives was 
+                        made effortless and the reviews really don't lie - I had the best 14 days of my life!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Latest Blogs-->
+        <section class="blog">
+            <h2>Latest Blogs</h2>
+            <div class="article-container"><!--container for articles-->
+                <article class="blog-main"><!--the large blog-->
+                    <a href="#"><!--link would take user to blog post-->
+                    <div class="blog-image-container">
+                        <img class="blog-image1" src="pictures/blog1.jpg" alt="#">
+                        <div class="date-main">
+                            <p><strong>07</strong> May</p>
+                        </div>
+                    </div>
+                    <div class="article-text">
+                        <h3>Holidays coming soon to Leading Choice Getaways...<i class="fas fa-arrow-right"></i></h3>
+                    </div>
+                    </a>
+                </article>
+                <article class="blog-aside1"><!--smaller blog-->
+                <a href="#"><!--link would take user to blog post-->
+                    <div class="blog-image-container">
+                        <img class="blog-image2" src="pictures/blog2.jpg" alt="#">
+                        <div class="date">
+                            <p><strong>21</strong> April</p>
+                        </div>
+                    </div>
+                    <div class="aside-text">
+                        <h3>NEW! Experience the beauty of Canada<i class="fas fa-arrow-right"></i></h3>
+                    </div>
+                </a>
+                </article>
+                <article class="blog-aside2"><!--smaller blog-->
+                <a href="#"><!--link would take user to blog post-->
+                    <div class="blog-image-container">
+                        <img class="blog-image3" src="pictures/blog3.jpg" alt="#">
+                        <div class="date">
+                            <p><strong>02</strong> April</p>
+                        </div>
+                    </div>
+                    <div class="aside-text">
+                        <h3>How Covid-19 has changed our business!<i class="fas fa-arrow-right"></i></h3>
+                    </div>
+                </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footerContainer">
+            <img class="logo_footer" src="pictures/logo_footer.png" alt="logo">
+            <div class="links_footer">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li><!--active to highlight current page user is on-->
+                    <li><a href="view-holidays.php">View Holidays</a></li>
+                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                    <li><a href="wireframes.pdf">Wireframes</a></li>
+                </ul>
+            </div>
+            <div class="contact_footer">
+                <h4>Contact Us</h4>
+                <ul class="footer_contactlist">
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <span class="contact">‎‏‏‎ ‎‎‎‎‎enquiries@LCGholidays.co.uk</span><!--span for inline with text-->
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span class="contact">‏‏‎ ‎07419742229</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="contact">‏‏‎ ‎Northumbria University</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="followContainer">
+                <div class="follow_footer">
+                    <h4>Follow Us</h4>
+                    <ul class="follow_footer"><!--links would take user to socials-->
+                        <li><a href='#'><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href='#'><i class="fab fa-twitter"></i></a></li>
+                        <li><a href='#'><i class="fab fa-instagram"></i></a></li>
+                        <li><a href='#'><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <img class="trustpilot" src="pictures/trustpilot.png" alt="trustpilot">
+            </div>
+        </div>
+    </footer>
+    
+    <!--Very bottom footer-->
+    <section class="copyright">
+        <h5>Leading Choice Getaways &copy; 2021 | Designed by Jack Gooday</h5>
+    </section>
+</body>
+</html>

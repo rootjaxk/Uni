@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="LeadingChoiceGetaways.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"><!--using google font-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--For mobile devices-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />  <!--favicon (logo in tab)-->
+    <script src="https://kit.fontawesome.com/cb47974c5e.js" crossorigin="anonymous"></script>  <!--using fontawesome for icons-->
+    <script src="responsive_menu.js"></script>   <!--hamburger menu-->
+    <title>Leading Choice Getaways</title>
+</head>
+
+<body>
+    <!--Navigation and head of page with logo-->
+    <header>
+        <nav class="navigation">
+            <a id="ham_menu">&#9776;</a><!--for mobile menu-->
+            <ul id="main-nav">
+                <li><a class="logo" href="index.html"><img class="logo" src="pictures/logo.png" alt="Companylogo"></a></li><!--making the logo click home-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="view-holidays.php">View Holidays</a></li>
+                <li><a href="admin.php">Admin</a></li>
+                <li><a class="active" href="credits.html">Credits</a></li><!--active shows current page underlined-->
+                <li><a href="wireframes.pdf">Wireframes</a></li>
+            </ul>
+        </nav>
+        <img class="logo_main" src="pictures/logocredits.png" alt="logo"><!--credits logo across waves image-->
+    </header>
+
+    <main>
+        <!--About me-->
+        <section class="details">
+            <h1 class="h1-credits">Credits</h1>
+            <div class="credit-container">
+                <div class="credit">
+                    <h2>Name:</h2>
+                    <p>Jack Gooday</p>
+                </div>
+                <div class="credit">
+                    <h2>Student ID:</h2>
+                    <p>w20007431</p>
+                </div>
+                <div class="credit">
+                    <h2>Email:</h2>
+                    <p>jack.gooday@northumbria.ac.uk</p>
+                </div>
+            </div>
+            <p class="course">I am a first year student studying Computer Networks and Cyber Security</p>   
+        </section>
+
+        <!--Security considerations-->
+        <section class="security-considerations">
+            <h2>Security Considerations</h2>
+            <p>The first security consideration I recommend is regarding personal information that users may be entering into your site. For example, users may be entering credit card details and billing information 
+            when purchasing the holidays, or creating user accounts with usernames and passwords so that they can view their holiday purchase history and change details to their holidays. All of these features mean 
+            personal information that can be used to identify a person will be stored and pass between the users browser and your server. To protect the user's sensitive information in transit, I recommend implementing 
+            HTTPS (Hyper Text Transfer Protocol Secure) to the website. This protocol will encrypt the information between the user's browser and the web server using TLS (Transport Layer Security) preventing men in the 
+            middle being able to read the personal information travelling over the network as it will be scrambled and unreadable. HTTPS is easily implemented through purchasing an SSL (Secure Socket Layer) certificate 
+            through your web hosting provider (Brafton, 2019). Additionally, once the information has reached the server, it should be fully encrypted inside the database with salted hashes rather than storing the data in 
+            plaintext. In the unlikely case an attacker manages to gain unauthorised entry to the database, this will preventing them from helping themselves to a nice list of personal information they could use for fraud or identity 
+            theft. Furthermore, when personal information is involved, it is important to be aware of The Data Protection Act 2018 which involves GDPR - the General Data Protection Regulation (Gov, 2021). This regulation 
+            states that you have a lawful responsibility to care for user's personal data and keep it secure otherwise severe repercussions may occur. These include potential fines from the ICO (Information Commissioner’s 
+            Office) of up to 10 million euros or two percent of the firm's global turnover (whichever is greater), not to mention the reputable damage which will lead to current and future customer's losing trust if their 
+            private information is leaked, hence it is important to keep personal information secure (ICO, 2021). Implementing encryption will protect users information, however it is also important to protect users accounts from 
+            unauthorised access as this can lead to fraudulent purchases of holidays. An easy way to do this is to add the option for two factor authentication, a simple security mechanism to implement that proves that the 
+            user logging into their account is authorised to do so. It does this by requiring a secondary approval method such as a code being sent to their phone to approve the log in attempt. This notifies the user regarding 
+            suspicious log in attempts and secures against stolen log in credentials through for example, brute forcing, because an attacker would not be able to log in without the physical secondary device.</p>
+            
+            <p>Further security considerations relate to security risks from malicious attacking techniques such as SQL injection and XSS. OWASP (The Open Web Application Security Project) provides a list of the top 10 web 
+            application security risks and at number one is injection (OWASP, 2021). Most commonly SQL (Structured Query Language) injection, an attacker can take advantage of input fields on your website by entering malicious 
+            SQL queries which take advantage of query logic. An attacker may retrieve, modify or delete data from the SQL database without authorisation. Here is an example of an SQL injection that I have previously used in a CTF 
+            challenge that will return all data stored in a database:
+            '; SELECT * FROM * WHERE * = ' OR 1=1--
+            The single quote exits the existing query then introduces a Boolean logic term at the end that will always return true, executing the overall query as true (Messier 2019, p. 426). Another type of injection attack, also 
+            in the OWASP top 10 is XSS (Cross-Site Scripting) which allows attackers to inject malicious client-side scripts into an input field that will execute the code within the browser of any user visiting the site (Messier 2019, p. 423). 
+            For example, at the simplest level writing "&lt;script>alert(1)&lt;/script>" into an input field on a site will produce an alert whenever a user visits that page. Whilst in this example the JavaScript is not malicious in itself, more 
+            malicious payloads may be inserted that may harm the user. To prevent these attacks happening, input validation and sanitisation on both the client side and the server side is incredibly important. What I mean by this is only 
+            allowing expected payloads to be entered into an input field on the website. For example escaping/sanitising all special characters entered by the user can prevent both SQL injection and XSS. Validation is important on the 
+            client side as it helps the user do the right thing before sending their query to the server, but validation is also important on the server side in order to prevent malicious users from skipping the client side form and 
+            attacking the server side directly.</p>
+        </section>
+
+        <!--References-->
+        <section class="references">
+            <h2>References</h2>
+            <div class="reference-container">
+                <div class="security">
+                    <h3>Security Considerations</h3>
+                    <p>Brafton (2019) <i>How to Convert HTTP to HTTPS: A Quick Guide [Infographic].</i> Available at: https://www.brafton.co.uk/blog/distribution/how-to-convert-http-to-https-a-quick-guide (Accessed: 23 April 2021).</p>
+                    <p>Information Commissioner’s Office (2021) <i>Penalties – In brief.</i> Available at: https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-law-enforcement-processing/penalties (Accessed: 23 April 2021).</p>
+                    <p>Messier, R. (2019) <i>CEHv10 Certified Ethical Hacker Study Guide.</i> Indiana: John Wiley & Sons, Inc.</p>
+                    <p>OWASP (2021) <i>Top 10 Web Application Security Risks.</i> Available at: https://owasp.org/www-project-top-ten (Accessed: 23 April 2021).</p>
+                    <p>UK Government (2021) <i>Data Protection – The Data Protection Act.</i> Available at: https://www.gov.uk/data-protection (Accessed: 23 April 2021).</p>
+                </div>
+                <div class="planning">
+                    <h3>Planning</h3>
+                    <div>
+                        <p class="explanation">I created the website logo and header banner with a website called Tailor Brands:</p>
+                        <p>Tailor Brands (2020) <i>Tailor Brands Logo Maker.</i> Available at: https://www.tailorbrands.com/logo-maker (Accessed: 16 March 2021).</p>
+                    </div>
+                    <div>
+                        <p class="explanation">I decided on the colour scheme for the website using these websites:</p>
+                        <p>Adobe Color (2021) <i>Explore.</i> Available at: https://color.adobe.com/explore/newest (Accessed 15 March 2021).</p>
+                        <p>Coolors (2021) <i>The super fast color schemes generator.</i> Available at: https://coolors.co/000000-b84545-ffffff-1f93a0-b8860b (Accessed 15 March 2021).</p>
+                        <p>Colorsontheweb (2021) <i>Color Wizard.</i> Available at: http://www.colorsontheweb.com/Color-Tools/Color-Wizard (Accessed 15 March 2021).</p>
+                        <p>WebAim (2021) <i>Contrast Checker.</i> Available at: https://webaim.org/resources/contrastchecker (Accessed 15 March 2021).</p>
+                    </div>
+                    <div>
+                        <p class="explanation">I created the wireframes using Adobe XD and decided on the google font Lato:</p>
+                        <p>Adobe (2021) <i>Adobe XD</i> (Version 38.1.12) [Computer program]. Available at: https://www.adobe.com/uk/products/xd.html (Accessed 15 March 2021).</p>
+                        <p>Google Fonts (2014) <i>Lato.</i> Available at: https://fonts.google.com/specimen/Lato (Accessed: 16 March 2021).</p>
+                    </div>
+                </div>
+
+                <div class="inspiration">
+                    <h3>Inspiration</h3>
+                    <p class="explanation">I used the following travel websites as visual inspiration for my design:</p>
+                    <p>Affordable Luxury Travel (2020) <i>Book Luxury Holidays & Tours from Affordable Luxury Travel - Affordable luxury travel.</i> Available at: https://www.affordableluxurytravel.co.uk (Accessed: 21 March 2021).</p>
+                    <p>CodingNepal (2020) <i>Responsive Footer Section Design with HTML & CSS.</i> Available at: https://www.codingnepalweb.com/2020/04/responsive-footer-section-design-html-css.html (Accessed: 17 March 2021).</p>
+                    <p>easyJet (2021) <i>easyJet holidays.</i> Available at: https://www.easyjet.com/en/holidays/all-inclusive-holidays (Accessed 24 March 2021). </p>
+                    <p>loveholidays (2021) <i>Holidays 2021 | Discover and book your perfect holiday.</i> Available at: https://www.loveholidays.com (Accessed: 26 March 2021).</p>
+                    <p>Teletext holidays (2021) <i>Luxury Holidays.</i> Available at: https://www.teletextholidays.co.uk/holidays/luxury-holidays (Accessed: 26 March 2021).</p>
+                    <p>Template monster (2021) <i>Wonder Tour.</i> Available at: https://www.templatemonsterpreview.com/demo/58200.html (Accessed 26 March 2021).</p>
+                </div>
+
+                <div class="font-awesome">
+                    <h3>Icons</h3>
+                    <p class="explanation">I decided to use these icons from Font Awesome on my website for visual features:</p>
+                    <p>Font Awesome (2021) <i>envelope.</i> Available at: https://fontawesome.com/icons/envelope?style=regular (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>phone.</i> Available at: https://fontawesome.com/icons/phone?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>map-marker-alt.</i> Available at: https://fontawesome.com/icons/map-marker-alt?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>pinterest.</i> Available at: https://fontawesome.com/icons/pinterest?style=brands (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>facebook-f.</i> Available at: https://fontawesome.com/icons/facebook-f?style=brands (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>twitter.</i> Available at: https://fontawesome.com/icons/twitter?style=brands (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>instagram.</i> Available at: https://fontawesome.com/icons/instagram?style=brands (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>star.</i> Available at: https://fontawesome.com/icons/star?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>award.</i> Available at: https://fontawesome.com/icons/award?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>calendar-alt.</i> Available at: https://fontawesome.com/icons/calendar-alt?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>globe-asia.</i> Available at: https://fontawesome.com/icons/globe-asia?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>umbrella-beach.</i> Available at: https://fontawesome.com/icons/umbrella-beach?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>check.</i> Available at: https://fontawesome.com/icons/check?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>moon.</i> Available at: https://fontawesome.com/icons/moon?style=solid (Accessed 17 March 2021).</p>
+                    <p>Font Awesome (2021) <i>arrow-right.</i> Available at: https://fontawesome.com/icons/arrow-right?style=solid (Accessed 17 March 2021).</p>
+                </div>
+
+                <div class="css">
+                    <h3>CSS Guidance</h3>
+                    <p class="explanation">I used these webpages to help me in styling my website with CSS:</p>
+                    <p>CSS-TRICKS (2021) <i>CSS Gradients.</i> Available at: https://css-tricks.com/css3-gradients (Accessed: 16 March 2021).</p>
+                    <p>W3.org (2001) <i>9.9.1 Specifying the stack level: the ‘z-index’ property.</i> Available at: https://www.w3.org/TR/CSS2/visuren.html#z-index (Accessed: 16 March 2021).</p>
+                    <p>W3.org (2001) <i>Web Style Sheets CSS tips & tricks.</i> Available at: https://www.w3.org/Style/Examples/007/center.en.tmpl (Accessed: 25 March 2021).</p>
+                    <p>W3Schools.com (2021) <i>CSS filter Property.</i> Available at: https://www.w3schools.com/cssref/css3_pr_filter.asp (Accessed: 20 March 2021).</p>
+                    <p>W3Schools.com (2021) <i>CSS Forms.</i> Available at: https://www.w3schools.com/css/css_form.asp (Accessed: 05 April 2021).</p>
+                    <p>W3Schools (2021) <i>CSS Horizontal Navigation Bar.</i> Available at: https://www.w3schools.com/css/css_navbar_horizontal.asp (Accessed: 16 March 2021).</p>
+                    <p>W3Schools.com (2021) <i>CSS Transitions.</i> Available at: https://www.w3schools.com/css/css3_transitions.asp (Accessed: 19 March 2021).</p>
+                    <p>W3Schools.com (2021) <i>How TO – Image with Transparent Text.</i> Available at: https://www.w3schools.com/howto/howto_css_image_transparent.asp (Accessed: 04 April 2021).</p>
+                    <p>W3Schools (2021) <i>How TO – Text Blocks Over Image.</i> Available at: https://www.w3schools.com/howto/howto_css_image_text_blocks.asp (Accessed: 19 March 2021).</p>
+                    <p>W3Schools (2021) <i>How TO – Zoom on Hover.</i> Available at: https://www.w3schools.com/howto/howto_css_zoom_hover.asp (Accessed: 19 March 2021).</p>
+                
+                </div>
+                <div class="images">
+                    <h3>Images</h3>
+                    <p class="explanation">These are where I found all the images used on my website:</p>
+                    <p>Asad Photo Maldives (2018) <i>Man and Woman Walking of Body of Water.</i> Available at: https://www.pexels.com/photo/man-and-woman-walking-of-body-of-water-1024993 (Accessed: 07 April 2021).</p>
+                    <p>Asam Photo Maldives (2020) <i>Aerial View Of A Beautiful Island Resort.</i> Available at: https://www.pexels.com/photo/aerial-view-of-a-beautiful-island-resort-3601425 (Accessed 24 March 2021).</p>
+                    <p>Canmandawe (2019) <i>Beautiful sunrays in Positano.</i> Available at: https://unsplash.com/photos/VkoIaXzl27Y (Accessed 24 March 2021).</p>
+                    <p>Chen, H. (2016) <i>Runrise in Serengeti.</i> Available at: https://unsplash.com/photos/0LwfbRtQ-ac (Accessed 19 March 2021).</p>
+                    <p>Erbetta, A. (2018) <i>Nothing better that wake up early in the morning and see this.</i> Available at: https://unsplash.com/photos/mpWPcRT9D1E (Accessed 24 March 2021).</p>
+                    <p>Feefo (2019) <i>feefo.</i> Available at: https://exceedoutsourcing.co.uk/2019/07/05/were-now-on-feefo (Accessed 26 March 2021).</p>
+                    <p>Fedorova, Y. (2019) <i>Snow Capped Mountain Ranges.</i> Available at: https://www.pexels.com/photo/snow-capped-mountain-ranges-2308815 (Accessed 24 March 2021).</p>
+                    <p>Filho, F. J. (2019) <i>Photo of Woman Wearing White Shirt.</i> Available at: https://www.pexels.com/photo/photo-of-woman-wearing-white-shirt-2701660 (Accessed 26 March 2021).</p>
+                    <p>Foster, E. (2015) <i>Golf Course.</i> Available at: https://unsplash.com/photos/V2xlPVSnMYA (Accessed 24 March 2021).</p>
+                    <p>GaPeppy1 (2019) <i>White Outdoor Lounge Chairs.</i> Available at: https://www.pexels.com/photo/white-outdoor-lounge-chairs-2373201 (Accessed: 07 April 2021).</p>
+                    <p>Garcia, V. (2020) <i>Happy couple of travellers taking selfie in forest.</i> Available at: https://www.pexels.com/photo/happy-couple-of-travelers-taking-selfie-in-forest-6324469 (Accessed 26 March 2021).</p>
+                    <p>Gerbouin, V. (2018) <i>Brown Nipa Hut on Body of Water.</i> Available at: https://www.pexels.com/photo/brown-nipa-hut-on-body-of-water-1179156 (Accessed 24 March 2021).</p>
+                    <p>Grzybowski, R. (2016) <i>Empty concert hall in Katowice.</i> Available at: https://unsplash.com/photos/YU6A5I_IjTw (Accessed 07 April 2021).</p>
+                    <p>Ilécio, D. (2019) <i>Grand Canyon during Sunset.</i> Available at: https://www.pexels.com/photo/grand-canyon-during-sunset-1840794 (Accessed 24 March 2021).</p>
+                    <p>JK (2015) <i>On a moving train.</i> Available at: https://unsplash.com/photos/gJhev0YgUcE (Accessed 19 March 2021).</p>
+                    <p>La Botteghetta (2021) <i>Pre opera – arena food with wine tasting.</i> Available at: https://www.labotteghetta.it/pre-opera-arena-food/?lang=en (Accessed 24 March 2021).</p>
+                    <p>Lawrence, D. (2019) <i>Woman Near Ocean.</i> Available at: https://www.pexels.com/photo/woman-near-ocean-3417701 (Accessed 24 March 2021).</p>
+                    <p>Momot, S. (2018) <i>Man Playing Golf.</i> Available at: https://www.pexels.com/photo/man-playing-golf-1409004/ (Accessed: 07 April 2021).</p>
+                    <p>Neill, A. (2016) <i>Emerald Bay.</i> Available at: https://unsplash.com/photos/H5k2qVaQPoM (Accessed 19 March 2021).</p>
+                    <p>Pappas, Z. (2018) <i>San Francisco Bridge Photo.</i> Available at: https://www.pexels.com/photo/san-francisco-bridge-photo-1006965 (Accessed 24 March 2021).</p>
+                    <p>Péchy, M. (2019) <i>Smiling Man in Front of Green Plants.</i> Available at: https://www.pexels.com/photo/smiling-man-in-front-of-green-plants-2078265 (Accessed 26 March 2021).</p>
+                    <p>Pesterev, S. (2017) <i>Niagara Falls on sunrise.</i> Available at: https://unsplash.com/photos/wZLsZ9DRLSI (Accessed 24 March 2021).</p>
+                    <p>Pixabay (2016) <i>Biker Holding Mountain Bike on Top of Mountain With Green Grass.</i> Available at: https://www.pexels.com/photo/biker-holding-mountain-bike-on-top-of-mountain-with-green-grass-161172 (Accessed 24 March 2021).</p>
+                    <p>Pixabay (2016) <i>Coconut Tree Lot.</i> Available at: https://www.pexels.com/photo/beach-chairs-coconut-trees-hut-idyllic-261204 (Accessed 19 March 2021).</p>
+                    <p>Pixabay (2016) <i>Clear Blue Sea.</i> Available at: https://www.pexels.com/photo/clear-blue-sea-164041 (Accessed 24 March 2021).</p>
+                    <p>Podvalny, A. (2017) <i>Elephant Walking.</i> Available at: https://www.pexels.com/photo/elephant-walking-321526 (Accessed: 07 April 2021).</p>
+                    <p>Podvalny, A. (2019) <i>Handara Gate Under Blue Sky.</i> Available at: https://www.pexels.com/photo/handara-gate-uner-blue-sky-2166553 (Accessed 24 March 2021).</p>
+                    <p>Pohorecki, R. (2015) <i>Person Standing on Rock Formation Facing Mountain.</i> Available at: https://www.pexels.com/photo/person-standing-on-rock-formation-facing-mountain-16718 (Accessed 07 April 2021).</p>
+                    <p>Redcharlie (2020) <i>Elephants on an African safari game drive.</i> Available at: https://unsplash.com/photos/nf7W_hn6DKQ (Accessed 24 March 2021).</p>
+                    <p>Rice, J. (2019) <i>Poolside Tulum.</i> Available at: https://unsplash.com/photos/ao1ZaY55bvs (Accessed 24 March 2021).</p>
+                    <p>Rezvanian, F. (2019) <i>Hot air balloons.</i> Available at: https://unsplash.com/photos/Eelegt4hFNc (Accessed 19 March 2021).</p>
+                    <p>Rrubba (2019) <i>People in Middle of Hills.</i> Available at: https://www.pexels.com/photo/people-in-middle-of-hills-2071557 (Accessed 24 March 2021).</p>
+                    <p>Santos, D. J. (2018) <i>Scenic of Ocean During Sunset.</i> Available at: https://www.pexels.com/photo/scenic-of-ocean-during-sunset-1139541 (Accessed: 16 March 2021).</p>
+                    <p>Shumski, R. (2019) <i>Scenic Photo of Lake Surrounded by Trees.</i> Available at: https://www.pexels.com/photo/scenic-photo-of-lake-surrounded-by-trees-1903702 (Accessed 24 March 2021).</p>
+                    <p>Swigunski, M. (2020) <i>The Maldives – Conrad Rangali Islands!</i> Available at: https://unsplash.com/photos/yERyCOOT8i8 (Accessed 24 March 2021).</p>
+                    <p>TelensFix (2018) <i>Photo of Woman Sitting on Boat Spreading Her Arms.</i> Available at: https://www.pexels.com/photo/photo-of-woman-sitting-on-boat-spreading-her-arms-1371360 (Accessed: 07 April 2021).</p>
+                    <p><i>Trustpilot</i> (2020) Available at: https://www.e4s.co.uk/news/articles/view/2498/job-news-and-information/graduate/Trustpilot-To-Create-30-Research--Development-Jobs-In-Edinburgh (Accessed: 17 March 2021).</p>
+                    <p>Wedding Packages New York City (2021) <i>Top of the Rock Wedding.</i> Available at: https://weddingpackagesnyc.com/product/top-of-the-rock-wedding (Accessed 24 March 2021).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footerContainer">
+            <img class="logo_footer" src="pictures/logo_footer.png" alt="logo">
+            <div class="links_footer">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="view-holidays.php">View Holidays</a></li>
+                    <li><a href="admin.php">Admin</a></li>
+                    <li><a class="active" href="credits.html">Credits</a></li> <!--active shows with page user is currently on-->
+                    <li><a href="wireframes.pdf">Wireframes</a></li>
+                </ul>
+            </div>
+            <div class="contact_footer">
+                <h4>Contact Us</h4>
+                <ul class="footer_contactlist">
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <span class="contact">‎‏‏‎ ‎‎‎‎‎enquiries@LCGholidays.co.uk</span><!--span for inline with text-->
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span class="contact">‏‏‎ ‎07419742229</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="contact">‏‏‎ ‎Northumbria University</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="followContainer">
+                <div class="follow_footer">
+                    <h4>Follow Us</h4>
+                    <ul class="follow_footer"><!--links would take user to socials-->
+                        <li><a href='#'><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href='#'><i class="fab fa-twitter"></i></a></li>
+                        <li><a href='#'><i class="fab fa-instagram"></i></a></li>
+                        <li><a href='#'><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <img class="trustpilot" src="pictures/trustpilot.png" alt="trustpilot">
+            </div>
+        </div>
+    </footer>
+
+    <!--Very bottom footer-->
+    <section class="copyright">
+        <h5>Leading Choice Getaways &copy; 2021 | Designed by Jack Gooday</h5>
+    </section>
+</body>
+</html>
