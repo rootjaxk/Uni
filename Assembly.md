@@ -8,14 +8,14 @@ A program handwritten in assembly for the JASPER processor which took two charac
 	ORG 0
 	MOVE #$0,B
 	
-write	MOVE $E3,A	   *say ‘”The difference between”
-	CMP #$0,A	   *check if screen ready
-	BEQ write	   *if LSb is 0 loop
-	MOVE B+data,A	   *move data to A
-	MOVE A,$E2	   *write letter to screen
-	ADD #$1,B	   *iterate over data
-	CMP #^23,B	   *if reach end go to loop 
-	BNE write	   *hasn’t reached the end so loop	
+write	MOVE $E3,A	*say ‘”The difference between”
+	CMP #$0,A	*check if screen ready
+	BEQ write	*if LSb is 0 loop
+	MOVE B+data,A	*move data to A
+	MOVE A,$E2	*write letter to screen
+	ADD #$1,B	*iterate over data
+	CMP #^23,B	*if reach end go to loop 
+	BNE write	*hasn’t reached the end so loop	
 	JMP loop	
 
 data	DC.W ^84	*T
